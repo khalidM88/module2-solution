@@ -1,66 +1,69 @@
-/* ضبط جميع العناصر لتجنب مشاكل الحواف */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* تنسيق الصفحة بشكل عام */
+/* General website background */
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background-color: #f0f8ff; /* Light background color */
+    margin: 0;
+    padding: 0;
 }
 
-/* تنسيق العنوان الرئيسي */
-header h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* تنسيق الأقسام */
+/* Section styling */
 .section {
-    border: 1px solid black;
+    border: 2px solid #333; /* Border color for sections */
+    border-radius: 10px; /* Rounded corners */
     padding: 20px;
-    margin: 10px;
-    background-color: #f4f4f4;
+    margin: 15px;
+    background-color: #e6e6fa; /* Background color for sections */
     position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Light box shadow for sections */
 }
 
-/* تنسيق العناوين داخل الأقسام */
-.section h2 {
+/* Section titles */
+.section-title {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #333;
-    color: white;
-    padding: 5px;
+    background-color: #ff6347; /* Background color for title */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 1.25em;
+    border: 1px solid #333; /* Border for title */
 }
 
-/* التصميم لعرض سطح المكتب */
+/* Desktop view (992px and above) */
 @media (min-width: 992px) {
     .section {
         float: left;
-        width: 30%;
+        width: 32%; /* Evenly distributed sections */
     }
 }
 
-/* التصميم لعرض الجهاز اللوحي */
+/* Tablet view (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .section {
-        width: 45%;
+        width: 48%;
     }
-
-    .section:nth-child(3) {
-        width: 100%;
-        clear: both;
+    .sushi {
+        width: 100%; /* Third section takes full width */
     }
 }
 
-/* التصميم لعرض الجوال */
+/* Mobile view (767px and below) */
 @media (max-width: 767px) {
     .section {
-        width: 100%;
-        clear: both;
+        width: 100%; /* Each section takes full width */
     }
+}
+
+/* Custom background colors for each section */
+.chicken {
+    background-color: #fdd835; /* Unique color for first section */
+}
+
+.beef {
+    background-color: #8bc34a; /* Unique color for second section */
+}
+
+.sushi {
+    background-color: #00bcd4; /* Unique color for third section */
 }
